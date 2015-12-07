@@ -331,6 +331,8 @@ void stage3(Hero x) {
 		}
 		else {
 			cout << "I don't understand what " << input << " means.\n"; //resets the loop
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		}
 	} while (!block);
 	block = false; //makes block usable for the next loops
@@ -366,6 +368,8 @@ void stage3(Hero x) {
 				}
 				else {
 					cout << "I don't understand what " << input << " means.\n";
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 				}
 			} while (!block);
 			block = false;
@@ -380,6 +384,8 @@ void stage3(Hero x) {
 		}
 		else {
 			cout << "I don't understand what " << input << " means.\n";
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		}
 	} while (!block);
 	block = false;
@@ -403,6 +409,8 @@ void stage3(Hero x) {
 		}
 		else {
 			cout << "I don't understand what " << input << " means.\n";
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		}
 	} while (!block);
 	block = false; //following line is the description begining the encounter for the Bugbear
@@ -476,6 +484,8 @@ void stage3(Hero x) {
 		}
 		else { //base case
 			cout << "The Bugbear gives you a puzzled look, almost as though it knows you didn't put in a 1, 2, 3, 4, or 5 when prompted.\n";
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		}
 	} while (Mon.getHealth() > 0 && x.getHealth() > 0); //fixed
 	block = false;
@@ -508,6 +518,8 @@ void stage3(Hero x) {
 			}
 			else {
 				cout << "I don't understand what " << input << " means.\n";
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			}
 		} while (!block); // next line sets up wraith
 		block = false;
@@ -576,6 +588,8 @@ void stage3(Hero x) {
 			}
 			else {
 				cout << "The Wraith gives you a puzzled look, almost as though it knows you didn't put in a 1, 2, 3, 4, or 5 when prompted.\n";
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			}
 		} while (Mon.getHealth() > 0 && x.getHealth() > 0);//fixed
 		if (x.getHealth() > 0) { //checks if dead
@@ -609,6 +623,8 @@ void stage3(Hero x) {
 				}
 				else {
 					cout << "I don't understand what " << input << " means.\n";
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 				}
 			} while (!block);//following is a description of the owlbear encounter
 			block = false;
@@ -678,6 +694,8 @@ void stage3(Hero x) {
 				}
 				else { //base case
 					cout << "The Owlbear gives you a puzzled look, almost as though it knows you didn't put in a 1, 2, 3, 4, or 5 when prompted.\n";
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 				}
 			} while (Mon.getHealth() > 0 && x.getHealth() > 0);
 			block = false;
@@ -756,6 +774,8 @@ void stage3(Hero x) {
 					}
 					else { //base case
 						cout << "The Death Knight smiles at your unwillingness to attack.\nIt might also be worth noting that skeletons can't stop smiling.\n";
+						cin.clear();
+						cin.ignore(numeric_limits<streamsize>::max(), '\n');
 					}
 				} while (Mon.getHealth() > 0 && x.getHealth() > 0);
 				if (x.getHealth() <= 0) { //checks dead
@@ -925,7 +945,7 @@ void fightMonster(Hero& h)
 			{
 				cout << "Oh no, you can't move that way! Do you turn (1) left or (2) right?" << endl;
 				cin.clear();
-				cin.ignore(256, '\n');
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
 				cin >> input;
 				err = true;
 			}
@@ -935,6 +955,8 @@ void fightMonster(Hero& h)
 				{
 					cout << "Oh no, you can't move that way! Do you turn (1) left or (2) right?" << endl;
 					cin >> input;
+					cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
 					err = true;
 				}
 				else
@@ -969,7 +991,7 @@ void fightMonster(Hero& h)
 					{
 						cout << "That's not a choice! What will you do: \n\t (1) Attack \n\t (2) Use Potion \n\t (3) Give Gold \n\t (4) Run Away" << endl;
 						cin.clear();
-						cin.ignore(256, '\n');
+						cin.ignore(numeric_limits<streamsize>::max(), '\n');
 						cin >> input;
 						err = true;
 					}
@@ -1036,7 +1058,7 @@ void fightMonster(Hero& h)
 									{
 										cout << "You can't give that amount of gold! How much d you want to actually give? \n";
 										cin.clear();
-										cin.ignore(256, '\n');
+										cin.ignore(numeric_limits<streamsize>::max(), '\n');
 										cin >> input;
 										err = true;
 									}
@@ -1137,7 +1159,7 @@ void fightMonster(Hero& h)
 						{
 							cout << "That's not a choice! What will you do: \n\t (1) Attack \n\t (2) Use Potion \n\t (3) Give Gold \n\t (4) Run Away" << endl;
 							cin.clear();
-							cin.ignore(256, '\n');
+							cin.ignore(numeric_limits<streamsize>::max(), '\n');
 							cin >> input;
 							err = true;
 						}
@@ -1204,7 +1226,7 @@ void fightMonster(Hero& h)
 										{
 											cout << "You can't give that amount of gold! How much d you want to actually give? \n";
 											cin.clear();
-											cin.ignore(256, '\n');
+											cin.ignore(numeric_limits<streamsize>::max(), '\n');
 											cin >> input;
 											err = true;
 										}
@@ -1303,7 +1325,7 @@ void fightMonster(Hero& h)
 							{
 								cout << "That's not a choice! What will you do: \n\t (1) Attack \n\t (2) Use Potion \n\t (3) Give Gold \n\t (4) Run Away" << endl;
 								cin.clear();
-								cin.ignore(256, '\n');
+								cin.ignore(numeric_limits<streamsize>::max(), '\n');
 								cin >> input;
 								err = true;
 							}
@@ -1418,7 +1440,7 @@ void fightMonster(Hero& h)
 								{
 									cout << "That's not a choice! What will you do: \n\t (1) Attack \n\t (2) Use Potion \n\t (3) Give Gold \n\t (4) Run Away" << endl;
 									cin.clear();
-									cin.ignore(256, '\n');
+									cin.ignore(numeric_limits<streamsize>::max(), '\n');
 									cin >> input;
 									err = true;
 								}
@@ -1994,6 +2016,8 @@ public:
 				exitFlag = true;
 			} else { //error catching
 				cout << "\nInvalid Input" << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			}
 		}
 	}
@@ -2999,6 +3023,8 @@ public:
 			cout << "\nWell if you're sure..." << endl;
 		} else {
 			cout << "\nThat is an invalid input\n" << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		}
 	}
 	void sellHealthTonic(Hero& Stoner) //increases the hero's health by 20 for 100 gold
@@ -3097,6 +3123,8 @@ public:
 				}
 			} else {//invalid input
 				cout << "\nThat is an invalid input" << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			}
 			cout << "You have " << Stoner.getGold() << " gold" << endl;
 			if(input == 0)//breaks back to town if user wishes
@@ -3118,6 +3146,8 @@ public:
 					x = true;
 				} else {
 					cout << "That is an invalid input" << endl;
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
 				}
 			}
 		}
@@ -3199,6 +3229,8 @@ void HUB(Hero& Stoner, InnKeeper& innKeeperObj, Merchant& merchantObj, Enchanter
 		} else //invalid input
 		{
 			cout << "\nInvalid input" << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		}
 	}
 }
@@ -3235,6 +3267,8 @@ void visitMerchant(Hero& x, Merchant& y){
 		} else //invalid input
 		{
 			cout << "That is an invalid input" << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		}
 	}
 }
